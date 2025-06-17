@@ -7,33 +7,181 @@
     <title>Riji V J | Full Stack Developer</title>
     <style>
         body {
-            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f6fa;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
             color: #2f3640;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        }
+
+        header {
+            background: #273c75;
+            color: white;
+            padding: 50px 20px;
             text-align: center;
-            flex-direction: column;
         }
 
-        h1 {
+        header h1 {
+            margin: 0;
             font-size: 3rem;
-            color: #273c75;
         }
 
-        p {
-            font-size: 1.5rem;
-            color: #353b48;
+        header p {
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #273c75;
+            border-bottom: 2px solid #dcdde1;
+            padding-bottom: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skills-list span {
+            background: #dcdde1;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #dcdde1;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        .resume {
+            margin-top: 20px;
+        }
+
+        .resume a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #273c75;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #273c75;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #dcdde1;
+            color: #2f3640;
         }
     </style>
 </head>
 
 <body>
-    <h1>Hello, I'm Riji V J</h1>
-    <p>Full Stack Developer | React.js | NestJS | MySQL</p>
+
+    <header>
+        <h1>Hello, I'm Riji V J</h1>
+        <p>Full Stack Developer | React.js | NestJS | MySQL</p>
+    </header>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>React.js</span>
+            <span>NestJS</span>
+            <span>MySQL</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Git</span>
+            <span>Node.js</span>
+            <span>Sequelize ORM</span>
+            <span>API Integration</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>MJ4Kerala</h3>
+                <p>A regional online shopping platform built with React, NestJS, and MySQL.</p>
+            </div>
+            <div class="project-card">
+                <h3>Papa Digital Academy</h3>
+                <p>A professional course portal with internship programs and payment integration.</p>
+            </div>
+            <div class="project-card">
+                <h3>OUTERA</h3>
+                <p>Multi-service outsourcing platform with admin and customer panel.</p>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Resume</h2>
+        <div class="resume">
+            <a href="YOUR_RESUME_LINK_HERE" download>Download My Resume (PDF)</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Riji V J. All Rights Reserved.
+    </footer>
+
 </body>
 
 </html>
