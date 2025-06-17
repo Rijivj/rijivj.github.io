@@ -7,17 +7,17 @@
     <title>Riji V J | Full Stack Developer</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f6f8;
-            color: #2f3640;
+            background: #f9f9f9;
+            color: #2c3e50;
         }
 
         header {
             background: #273c75;
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -42,79 +42,37 @@
             padding-bottom: 10px;
         }
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
+        .contact,
+        .summary,
+        .experience,
+        .projects,
+        .skills,
+        .education,
+        .languages {
+            margin-top: 40px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .project-card,
+        .edu-item,
+        .exp-item {
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .skills-list span {
-            background: #dcdde1;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-card {
-            background: white;
-            padding: 20px;
-            border: 1px solid #dcdde1;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-        }
-
-        .resume {
-            margin-top: 20px;
-        }
-
-        .resume a {
             display: inline-block;
-            padding: 10px 20px;
-            background: #273c75;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .contact-form {
-            margin-top: 20px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            background: #273c75;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
             background: #dcdde1;
-            color: #2f3640;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -122,64 +80,130 @@
 <body>
 
     <header>
-        <h1>Hello, I'm Riji V J</h1>
+        <h1>Riji V J</h1>
         <p>Full Stack Developer | React.js | NestJS | MySQL</p>
+        <p>E: Rijivj651@gmail.com | P: 9995782784 | Thrissur, Kerala</p>
     </header>
 
-    <section>
+    <section class="summary">
+        <h2>Summary</h2>
+        <p>
+            I am a motivated Full Stack Developer with internship and freelance experience in designing, developing, and
+            deploying responsive web applications using the MERN stack. Proficient in both frontend and backend
+            technologies, cloud deployments, and database management. Seeking to leverage my skills in a dynamic,
+            team-oriented environment.
+        </p>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+
+        <div class="exp-item">
+            <h3>Full Stack Developer – Papa Digital Solution</h3>
+            <p><strong>Jan 2024 – Present</strong></p>
+            <ul>
+                <li>Developed responsive UI with React.js</li>
+                <li>Built RESTful APIs using Node.js and Express.js</li>
+                <li>Managed data using MySQL</li>
+                <li>Deployed applications to cloud platforms</li>
+                <li>Conducted manual testing for performance and reliability</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <h3>Software Developer Intern – BairuhaTech</h3>
+            <p><strong>Feb 2024 – May 2024, Calicut</strong></p>
+            <ul>
+                <li>Assisted in building full-stack web applications using MERN stack</li>
+                <li>Supported frontend and backend development</li>
+                <li>Participated in debugging and deployment</li>
+                <li>Collaborated with senior developers for feature implementation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Tiny Tot</h3>
+            <p>Interactive website for students (Class 1–5) promoting healthy habits, hygiene, and manners through
+                quizzes, games, and rewards.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Grievance Redressal & She-Box App</h3>
+            <p>Android app designed to manage institutional grievances and enhance student safety.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>HR Management System</h3>
+            <p>A complete HR and employee management system for attendance, task assignment, and reporting.</p>
+        </div>
+    </section>
+
+    <section class="skills">
         <h2>Skills</h2>
         <div class="skills-list">
             <span>React.js</span>
-            <span>NestJS</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
             <span>MySQL</span>
+            <span>MongoDB</span>
             <span>JavaScript</span>
             <span>HTML</span>
             <span>CSS</span>
+            <span>Python</span>
+            <span>Postman</span>
             <span>Git</span>
-            <span>Node.js</span>
-            <span>Sequelize ORM</span>
-            <span>API Integration</span>
+            <span>GitHub</span>
+            <span>Hostinger</span>
+            <span>AWS</span>
+            <span>Manual Testing</span>
+            <span>Responsive Web</span>
+            <span>Agile</span>
+            <span>ANTD</span>
+            <span>Apache Ant</span>
+            <span>Bootstrap</span>
+            <span>C/C++</span>
         </div>
     </section>
 
-    <section>
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>MJ4Kerala</h3>
-                <p>A regional online shopping platform built with React, NestJS, and MySQL.</p>
-            </div>
-            <div class="project-card">
-                <h3>Papa Digital Academy</h3>
-                <p>A professional course portal with internship programs and payment integration.</p>
-            </div>
-            <div class="project-card">
-                <h3>OUTERA</h3>
-                <p>Multi-service outsourcing platform with admin and customer panel.</p>
-            </div>
-            <!-- Add more project cards as needed -->
+    <section class="education">
+        <h2>Education</h2>
+
+        <div class="edu-item">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>Center for Computer Science and Information Technology – Thrissur (2022 – 2024)</p>
+        </div>
+
+        <div class="edu-item">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Don Bosco College, Calicut University – Mannuthy (2019 – 2022)</p>
+        </div>
+
+        <div class="edu-item">
+            <h3>Higher Secondary Education</h3>
+            <p>St. George Higher Secondary School – Puttekara (2017 – 2019)</p>
+        </div>
+
+        <div class="edu-item">
+            <h3>SSLC</h3>
+            <p>Lady Immaculate Girls High School – Choondal (2016 – 2017)</p>
         </div>
     </section>
 
-    <section>
-        <h2>Resume</h2>
-        <div class="resume">
-            <a href="./RIJI.pdf" download>Download My Resume (PDF)</a>
-        </div>
+    <section class="languages">
+        <h2>Languages</h2>
+        <ul>
+            <li><strong>English:</strong> Native</li>
+            <li><strong>Malayalam:</strong> Native</li>
+            <li><strong>Hindi:</strong> Advanced</li>
+        </ul>
     </section>
 
-    <section>
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        &copy; 2025 Riji V J. All Rights Reserved.
+    <footer style="text-align:center; padding: 20px; background:#dcdde1;">
+        &copy; 2025 Riji V J. All rights reserved.
     </footer>
 
 </body>
