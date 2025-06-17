@@ -5,51 +5,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riji V J | Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f9f9f9;
+            background: #f4f7fc;
             color: #2c3e50;
+            line-height: 1.6;
         }
 
         header {
-            background: #273c75;
+            background: linear-gradient(135deg, #273c75, #40739e);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.2rem;
+            font-weight: 700;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            margin: 10px 0;
         }
 
         section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             max-width: 1000px;
             margin: auto;
         }
 
         h2 {
             color: #273c75;
-            border-bottom: 2px solid #dcdde1;
-            padding-bottom: 10px;
-        }
-
-        .contact,
-        .summary,
-        .experience,
-        .projects,
-        .skills,
-        .education,
-        .languages {
-            margin-top: 40px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #dcdde1;
+            display: inline-block;
         }
 
         ul {
@@ -60,18 +56,31 @@
         .edu-item,
         .exp-item {
             background: white;
-            margin: 15px 0;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 25px;
+            border-left: 6px solid #273c75;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .skills-list span {
             display: inline-block;
             background: #dcdde1;
-            padding: 8px 14px;
-            margin: 5px;
-            border-radius: 20px;
+            padding: 10px 18px;
+            margin: 6px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .skills-list span:hover {
+            background: #273c75;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #dcdde1;
             font-weight: 600;
         }
     </style>
@@ -82,128 +91,92 @@
     <header>
         <h1>Riji V J</h1>
         <p>Full Stack Developer | React.js | NestJS | MySQL</p>
-        <p>E: Rijivj651@gmail.com | P: 9995782784 | Thrissur, Kerala</p>
+        <p>Email: Rijivj651@gmail.com | Phone: 9995782784 | Thrissur, Kerala</p>
     </header>
 
-    <section class="summary">
+    <section>
         <h2>Summary</h2>
         <p>
-            I am a motivated Full Stack Developer with internship and freelance experience in designing, developing, and
-            deploying responsive web applications using the MERN stack. Proficient in both frontend and backend
-            technologies, cloud deployments, and database management. Seeking to leverage my skills in a dynamic,
-            team-oriented environment.
+            I am a motivated Full Stack Developer with hands-on internship and freelance experience in designing,
+            developing, and deploying responsive web applications using the MERN stack. Proficient in both frontend and
+            backend technologies, cloud deployments, and database management.
         </p>
     </section>
 
-    <section class="experience">
+    <section>
         <h2>Experience</h2>
-
         <div class="exp-item">
-            <h3>Full Stack Developer – Papa Digital Solution</h3>
-            <p><strong>Jan 2024 – Present</strong></p>
+            <h3>Papa Digital Solution – Full Stack Developer</h3>
             <ul>
                 <li>Developed responsive UI with React.js</li>
-                <li>Built RESTful APIs using Node.js and Express.js</li>
-                <li>Managed data using MySQL</li>
-                <li>Deployed applications to cloud platforms</li>
-                <li>Conducted manual testing for performance and reliability</li>
+                <li>Built RESTful APIs with Node.js and Express.js</li>
+                <li>Managed MySQL database</li>
+                <li>Cloud deployment and manual testing</li>
             </ul>
         </div>
-
         <div class="exp-item">
-            <h3>Software Developer Intern – BairuhaTech</h3>
-            <p><strong>Feb 2024 – May 2024, Calicut</strong></p>
+            <h3>BairuhaTech – Software Developer Intern</h3>
             <ul>
-                <li>Assisted in building full-stack web applications using MERN stack</li>
-                <li>Supported frontend and backend development</li>
-                <li>Participated in debugging and deployment</li>
-                <li>Collaborated with senior developers for feature implementation</li>
+                <li>Full-stack development with MERN stack</li>
+                <li>Frontend & Backend support</li>
+                <li>Debugging and deployment tasks</li>
             </ul>
         </div>
     </section>
 
-    <section class="projects">
+    <section>
         <h2>Projects</h2>
-
         <div class="project-card">
             <h3>Tiny Tot</h3>
-            <p>Interactive website for students (Class 1–5) promoting healthy habits, hygiene, and manners through
-                quizzes, games, and rewards.</p>
+            <p>Website for children to promote hygiene and manners through games and quizzes.</p>
         </div>
-
         <div class="project-card">
-            <h3>Grievance Redressal & She-Box App</h3>
-            <p>Android app designed to manage institutional grievances and enhance student safety.</p>
+            <h3>Grievance & She-Box App</h3>
+            <p>Android app to manage institutional complaints and improve student safety.</p>
         </div>
-
         <div class="project-card">
             <h3>HR Management System</h3>
-            <p>A complete HR and employee management system for attendance, task assignment, and reporting.</p>
+            <p>Platform for employee management including attendance and task tracking.</p>
         </div>
     </section>
 
-    <section class="skills">
+    <section>
         <h2>Skills</h2>
         <div class="skills-list">
-            <span>React.js</span>
-            <span>Node.js</span>
-            <span>Express.js</span>
-            <span>MySQL</span>
-            <span>MongoDB</span>
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Python</span>
-            <span>Postman</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Hostinger</span>
-            <span>AWS</span>
-            <span>Manual Testing</span>
-            <span>Responsive Web</span>
-            <span>Agile</span>
-            <span>ANTD</span>
-            <span>Apache Ant</span>
-            <span>Bootstrap</span>
-            <span>C/C++</span>
+            <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MySQL</span>
+            <span>MongoDB</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
+            <span>Python</span><span>Postman</span><span>Git</span><span>GitHub</span>
+            <span>Hostinger</span><span>AWS</span><span>Manual Testing</span><span>ANTD</span>
         </div>
     </section>
 
-    <section class="education">
+    <section>
         <h2>Education</h2>
-
         <div class="edu-item">
-            <h3>Master of Computer Applications (MCA)</h3>
-            <p>Center for Computer Science and Information Technology – Thrissur (2022 – 2024)</p>
+            <h3>MCA - CCSIT, Thrissur (2022–2024)</h3>
         </div>
-
         <div class="edu-item">
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p>Don Bosco College, Calicut University – Mannuthy (2019 – 2022)</p>
+            <h3>BCA - Don Bosco College, Mannuthy (2019–2022)</h3>
         </div>
-
         <div class="edu-item">
-            <h3>Higher Secondary Education</h3>
-            <p>St. George Higher Secondary School – Puttekara (2017 – 2019)</p>
+            <h3>Higher Secondary - St. George HSS (2017–2019)</h3>
         </div>
-
         <div class="edu-item">
-            <h3>SSLC</h3>
-            <p>Lady Immaculate Girls High School – Choondal (2016 – 2017)</p>
+            <h3>SSLC - Lady Immaculate GHS (2016–2017)</h3>
         </div>
     </section>
 
-    <section class="languages">
+    <section>
         <h2>Languages</h2>
         <ul>
-            <li><strong>English:</strong> Native</li>
-            <li><strong>Malayalam:</strong> Native</li>
-            <li><strong>Hindi:</strong> Advanced</li>
+            <li>English – Native</li>
+            <li>Malayalam – Native</li>
+            <li>Hindi – Advanced</li>
         </ul>
     </section>
 
-    <footer style="text-align:center; padding: 20px; background:#dcdde1;">
-        &copy; 2025 Riji V J. All rights reserved.
+    <footer>
+        &copy; 2025 Riji V J. All Rights Reserved.
     </footer>
 
 </body>
