@@ -9,37 +9,31 @@
 
     <style>
         :root {
-            --bg: #fafafa;
-            --text: #111;
-            --muted: #666;
+            --bg: #f9fafb;
+            --text: #0f172a;
+            --muted: #64748b;
             --border: #e5e7eb;
-            --accent: #000;
         }
 
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
+            margin: 0;
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 80px 20px;
         }
 
         /* HERO */
         .hero {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
             margin-bottom: 120px;
         }
 
@@ -50,12 +44,14 @@
         }
 
         .hero p {
-            max-width: 650px;
+            max-width: 700px;
             font-size: 1.1rem;
             color: var(--muted);
+            margin-top: 20px;
         }
 
         .hero .meta {
+            margin-top: 15px;
             font-size: .95rem;
             color: var(--muted);
         }
@@ -66,82 +62,79 @@
         }
 
         section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-
-        /* EXPERIENCE */
-        .exp {
-            display: grid;
-            gap: 30px;
-        }
-
-        .exp-item {
-            padding: 25px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: #fff;
-        }
-
-        .exp-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .exp-item ul {
-            padding-left: 18px;
-            color: var(--muted);
+            font-size: 2rem;
+            margin-bottom: 50px;
         }
 
         /* PROJECTS */
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
         }
 
-        .project {
+        .project-card {
             background: #fff;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,.08);
+            transition: transform .35s ease, box-shadow .35s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0,0,0,.12);
+        }
+
+        .project-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,.65),
+                rgba(0,0,0,.2)
+            );
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform .3s ease, box-shadow .3s ease;
+            align-items: flex-end;
+            padding: 20px;
         }
 
-        .project:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 40px rgba(0,0,0,.08);
-        }
-
-        .project h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            color: var(--muted);
-            font-size: .95rem;
-            margin-bottom: 25px;
-        }
-
-        .project a {
+        .project-overlay a {
+            color: #fff;
             text-decoration: none;
-            color: var(--accent);
             font-weight: 600;
             font-size: .95rem;
         }
 
-        .project a::after {
-            content: " →";
-            transition: margin-left .2s ease;
+        .project-content {
+            padding: 25px;
         }
 
-        .project a:hover::after {
-            margin-left: 6px;
+        .project-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            font-size: .95rem;
+            color: var(--muted);
         }
 
         /* SKILLS */
@@ -152,17 +145,16 @@
         }
 
         .skills span {
+            background: #fff;
             border: 1px solid var(--border);
             padding: 10px 16px;
             border-radius: 30px;
             font-size: .9rem;
-            background: #fff;
         }
 
-        /* FOOTER */
         footer {
             border-top: 1px solid var(--border);
-            padding: 40px 20px;
+            padding: 40px;
             text-align: center;
             color: var(--muted);
             font-size: .9rem;
@@ -172,116 +164,102 @@
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- HERO -->
-        <div class="hero">
-            <h1>Riji V J</h1>
-            <p>
-                Full Stack Developer focused on building reliable, scalable web applications
-                using React, Node.js, NestJS, and MySQL. Experienced in delivering real
-                production websites for businesses and startups.
-            </p>
-            <div class="meta">
-                📍 Thrissur, Kerala · 📧 Rijivj651@gmail.com · 📞 9995782784
-            </div>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Riji V J</h1>
+        <p>
+            Full Stack Developer building modern, scalable, production-ready
+            websites using React, Node.js, NestJS, and MySQL.
+        </p>
+        <div class="meta">
+            Thrissur, Kerala · Rijivj651@gmail.com · 9995782784
         </div>
-
-        <!-- EXPERIENCE -->
-        <section>
-            <h2>Experience</h2>
-            <div class="exp">
-                <div class="exp-item">
-                    <h3>Papa Digital Solution — Full Stack Developer</h3>
-                    <ul>
-                        <li>Built and maintained React-based production websites</li>
-                        <li>Developed REST APIs using Node.js & Express</li>
-                        <li>Handled MySQL databases and deployments</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <h3>Bairuha Tech — Software Developer Intern</h3>
-                    <ul>
-                        <li>MERN stack development</li>
-                        <li>Debugging, testing & deployment support</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section>
-            <h2>Selected Work</h2>
-            <div class="projects">
-
-                <div class="project">
-                    <h3>Revista Engineering</h3>
-                    <p>Corporate website with modern layout and responsive design.</p>
-                    <a href="https://revistaeng.com/" target="_blank">View Project</a>
-                </div>
-
-                <div class="project">
-                    <h3>Misty Holidays</h3>
-                    <p>Travel and tourism website with destination showcases.</p>
-                    <a href="http://mistyholidays.com/" target="_blank">View Project</a>
-                </div>
-
-                <div class="project">
-                    <h3>Meant OIR</h3>
-                    <p>Educational mentorship platform with admin management.</p>
-                    <a href="https://meantoir.com/" target="_blank">View Project</a>
-                </div>
-
-                <div class="project">
-                    <h3>Hilite Platino</h3>
-                    <p>Luxury real estate website for premium apartments.</p>
-                    <a href="https://www.hiliteplatino.com/" target="_blank">View Project</a>
-                </div>
-
-                <div class="project">
-                    <h3>Papa Digital Academy</h3>
-                    <p>Education and internship platform with lead capture.</p>
-                    <a href="https://papadigitalacademy.com/" target="_blank">View Project</a>
-                </div>
-
-                <div class="project">
-                    <h3>Papabear4U</h3>
-                    <p>E-commerce style product showcase website.</p>
-                    <a href="https://papabear4u.com/" target="_blank">View Project</a>
-                </div>
-
-                <div class="project">
-                    <h3>MJ4P Kerala</h3>
-                    <p>Admin-managed product listing platform.</p>
-                    <a href="https://mj4p.com/" target="_blank">View Project</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section>
-            <h2>Skills</h2>
-            <div class="skills">
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>NestJS</span>
-                <span>Express.js</span>
-                <span>MySQL</span>
-                <span>MongoDB</span>
-                <span>JavaScript</span>
-                <span>HTML & CSS</span>
-                <span>AWS</span>
-                <span>Git & GitHub</span>
-            </div>
-        </section>
-
     </div>
 
-    <footer>
-        © 2025 Riji V J — Full Stack Developer
-    </footer>
+    <!-- PROJECTS -->
+    <section>
+        <h2>Live Projects</h2>
+
+        <div class="projects">
+
+            <!-- Project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/revista.jpg" alt="Revista Engineering">
+                    <div class="project-overlay">
+                        <a href="https://revistaeng.com/" target="_blank">View Live →</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Revista Engineering</h3>
+                    <p>Corporate engineering website with responsive modern UI.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/misty.jpg" alt="Misty Holidays">
+                    <div class="project-overlay">
+                        <a href="http://mistyholidays.com/" target="_blank">View Live →</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Misty Holidays</h3>
+                    <p>Travel & tourism platform with destination showcases.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/meantoir.jpg" alt="Meant OIR">
+                    <div class="project-overlay">
+                        <a href="https://meantoir.com/" target="_blank">View Live →</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Meant OIR</h3>
+                    <p>Mentorship & education platform with admin panel.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/hilite.jpg" alt="Hilite Platino">
+                    <div class="project-overlay">
+                        <a href="https://www.hiliteplatino.com/" target="_blank">View Live →</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Hilite Platino</h3>
+                    <p>Luxury real estate website for premium apartments.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>NestJS</span>
+            <span>Express.js</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
+            <span>AWS</span>
+            <span>Git</span>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2025 Riji V J — Full Stack Developer
+</footer>
 
 </body>
 </html>
