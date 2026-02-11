@@ -44,14 +44,14 @@
         }
 
         .hero p {
-            max-width: 700px;
+            max-width: 720px;
             font-size: 1.1rem;
             color: var(--muted);
             margin-top: 20px;
         }
 
         .hero .meta {
-            margin-top: 15px;
+            margin-top: 16px;
             font-size: .95rem;
             color: var(--muted);
         }
@@ -89,7 +89,6 @@
         .project-image {
             position: relative;
             height: 220px;
-            overflow: hidden;
         }
 
         .project-image img {
@@ -106,11 +105,7 @@
         .project-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(0,0,0,.65),
-                rgba(0,0,0,.2)
-            );
+            background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.15));
             display: flex;
             align-items: flex-end;
             padding: 20px;
@@ -134,6 +129,29 @@
 
         .project-content p {
             font-size: .95rem;
+            color: var(--muted);
+        }
+
+        /* EDUCATION */
+        .education {
+            display: grid;
+            gap: 25px;
+        }
+
+        .edu-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .edu-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .edu-card span {
+            font-size: .9rem;
             color: var(--muted);
         }
 
@@ -170,8 +188,8 @@
     <div class="hero">
         <h1>Riji V J</h1>
         <p>
-            Full Stack Developer building modern, scalable, production-ready
-            websites using React, Node.js, NestJS, and MySQL.
+            Full Stack Developer with hands-on experience delivering real-world,
+            production-ready web applications using React, Node.js, NestJS, and MySQL.
         </p>
         <div class="meta">
             Thrissur, Kerala · Rijivj651@gmail.com · 9995782784
@@ -184,59 +202,81 @@
 
         <div class="projects">
 
-            <!-- Project -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/revista.jpg" alt="Revista Engineering">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Revista Engineering">
                     <div class="project-overlay">
                         <a href="https://revistaeng.com/" target="_blank">View Live →</a>
                     </div>
                 </div>
                 <div class="project-content">
                     <h3>Revista Engineering</h3>
-                    <p>Corporate engineering website with responsive modern UI.</p>
+                    <p>Corporate engineering website with modern UI and responsive design.</p>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/misty.jpg" alt="Misty Holidays">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Misty Holidays">
                     <div class="project-overlay">
                         <a href="http://mistyholidays.com/" target="_blank">View Live →</a>
                     </div>
                 </div>
                 <div class="project-content">
                     <h3>Misty Holidays</h3>
-                    <p>Travel & tourism platform with destination showcases.</p>
+                    <p>Travel & tourism platform showcasing destinations and packages.</p>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/meantoir.jpg" alt="Meant OIR">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="Meant OIR">
                     <div class="project-overlay">
                         <a href="https://meantoir.com/" target="_blank">View Live →</a>
                     </div>
                 </div>
                 <div class="project-content">
                     <h3>Meant OIR</h3>
-                    <p>Mentorship & education platform with admin panel.</p>
+                    <p>Mentorship & education platform with admin management.</p>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/hilite.jpg" alt="Hilite Platino">
+                    <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Hilite Platino">
                     <div class="project-overlay">
                         <a href="https://www.hiliteplatino.com/" target="_blank">View Live →</a>
                     </div>
                 </div>
                 <div class="project-content">
                     <h3>Hilite Platino</h3>
-                    <p>Luxury real estate website for premium apartments.</p>
+                    <p>Luxury real estate website for premium residential apartments.</p>
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+        <div class="education">
+            <div class="edu-card">
+                <h3>MCA — CCSIT, Thrissur</h3>
+                <span>2022 – 2024</span>
+            </div>
+            <div class="edu-card">
+                <h3>BCA — Don Bosco College, Mannuthy</h3>
+                <span>2019 – 2022</span>
+            </div>
+            <div class="edu-card">
+                <h3>Higher Secondary — St. George HSS</h3>
+                <span>2017 – 2019</span>
+            </div>
+            <div class="edu-card">
+                <h3>SSLC — Lady Immaculate GHS</h3>
+                <span>2016 – 2017</span>
+            </div>
         </div>
     </section>
 
@@ -251,7 +291,7 @@
             <span>MySQL</span>
             <span>MongoDB</span>
             <span>AWS</span>
-            <span>Git</span>
+            <span>Git & GitHub</span>
         </div>
     </section>
 
