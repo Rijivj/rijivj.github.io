@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 :root {
@@ -200,6 +201,29 @@ footer {
         text-align: center;
     }
 }
+.whatsapp-link {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.1);
+}
+
 </style>
 </head>
 <body>
@@ -213,7 +237,9 @@ footer {
             I build scalable, business-ready web applications with clean architecture.</p>
             <p>📍 Thrissur, Kerala | 📧 Rijivj651@gmail.com | 📞 9995782784</p>
         </div>
-        <img src="https://images.unsplash.com/photo-1603575448360-153f093fd0c5?q=80&w=400" alt="Developer">
+       <img src="https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?auto=format&fit=crop&w=800&q=80" 
+  alt="Developer workspace">
+
     </div>
 </div>
 
@@ -256,8 +282,8 @@ footer {
 <div class="project">
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 <div class="project-content">
-<h3>Meant OIR</h3>
-<p>Mentorship platform with admin dashboard.</p>
+<h3>Meantoir Global Academy</h3>
+<p>Course Listing platform with admin dashboard.</p>
 <a href="https://meantoir.com/" target="_blank">View Live</a>
 </div>
 </div>
@@ -277,6 +303,15 @@ footer {
 <h3>Papa Digital Academy</h3>
 <p>Education & internship platform.</p>
 <a href="https://papadigitalacademy.com/" target="_blank">View Live</a>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<div class="project-content">
+<h3>Papabear</h3>
+<p>Mobile app for beauty and wellness</p>
+<a href="https://papabear4u.com/" target="_blank">View Live</a>
 </div>
 </div>
 
@@ -307,12 +342,19 @@ footer {
 © 2025 Riji V J · Full Stack Developer
 </footer>
 
-<!-- WHATSAPP -->
-<div class="whatsapp" onclick="openWA()">💬</div>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-link" onclick="openWA()">
+    <i class="fa fa-whatsapp"></i>
+</div>
+
 
 <script>
 function openWA() {
-    window.open("https://wa.me/919995782784?text=Hi%20Riji,%20I%20saw%20your%20portfolio%20and%20want%20to%20connect.", "_blank");
+    window.open(
+        "https://wa.me/919995782784?text=Hi%20Riji,%20I%20saw%20your%20portfolio%20and%20want%20to%20connect.",
+        "_blank"
+    );
 }
 </script>
 
