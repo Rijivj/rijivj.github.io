@@ -14,6 +14,7 @@
             --muted: #6b7280;
             --border: #e5e7eb;
             --accent: #111827;
+            --whatsapp: #25D366;
         }
 
         * {
@@ -33,7 +34,6 @@
             padding: 80px 20px;
         }
 
-        /* HEADER */
         header {
             margin-bottom: 100px;
         }
@@ -68,7 +68,6 @@
             padding-bottom: 10px;
         }
 
-        /* PROJECT LIST */
         .project {
             display: grid;
             grid-template-columns: 420px 1fr;
@@ -109,7 +108,6 @@
             text-decoration: underline;
         }
 
-        /* EDUCATION */
         .edu {
             display: grid;
             gap: 20px;
@@ -135,6 +133,31 @@
             text-align: center;
             font-size: .9rem;
             color: var(--muted);
+        }
+
+        /* WHATSAPP BUTTON */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--whatsapp);
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,.2);
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease;
+            z-index: 999;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 28px rgba(0,0,0,.3);
         }
 
         @media(max-width: 900px) {
@@ -183,56 +206,6 @@
         </div>
     </div>
 
-    <div class="project">
-        <img src="images/meantoir.jpg" alt="Meant OIR">
-        <div>
-            <h3>Meant OIR</h3>
-            <p>Mentorship and education platform with admin-controlled content.</p>
-            <div class="tech">React · Node.js · MySQL</div>
-            <a href="https://meantoir.com/" target="_blank">View Live</a>
-        </div>
-    </div>
-
-    <div class="project">
-        <img src="images/hilite.jpg" alt="Hilite Platino">
-        <div>
-            <h3>Hilite Platino</h3>
-            <p>Luxury real estate website for premium residential apartments.</p>
-            <div class="tech">HTML · CSS · JavaScript</div>
-            <a href="https://www.hiliteplatino.com/" target="_blank">View Live</a>
-        </div>
-    </div>
-
-    <div class="project">
-        <img src="images/papadigitalacademy.jpg" alt="Papa Digital Academy">
-        <div>
-            <h3>Papa Digital Academy</h3>
-            <p>Education platform with internship listings and enquiry management.</p>
-            <div class="tech">React · Node.js · MySQL</div>
-            <a href="https://papadigitalacademy.com/" target="_blank">View Live</a>
-        </div>
-    </div>
-
-    <div class="project">
-        <img src="images/papabear4u.jpg" alt="Papabear4U">
-        <div>
-            <h3>Papabear4U</h3>
-            <p>E-commerce style product showcase website.</p>
-            <div class="tech">React · Node.js</div>
-            <a href="https://papabear4u.com/" target="_blank">View Live</a>
-        </div>
-    </div>
-
-    <div class="project">
-        <img src="images/mj4p.jpg" alt="MJ4P Kerala">
-        <div>
-            <h3>MJ4P Kerala</h3>
-            <p>Admin-managed product listing platform with customer panel.</p>
-            <div class="tech">React · NestJS · MySQL</div>
-            <a href="https://mj4p.com/" target="_blank">View Live</a>
-        </div>
-    </div>
-
 </section>
 
 <section>
@@ -246,14 +219,6 @@
             <h3>BCA — Don Bosco College, Mannuthy</h3>
             <span>2019 – 2022</span>
         </div>
-        <div class="edu-item">
-            <h3>Higher Secondary — St. George HSS</h3>
-            <span>2017 – 2019</span>
-        </div>
-        <div class="edu-item">
-            <h3>SSLC — Lady Immaculate GHS</h3>
-            <span>2016 – 2017</span>
-        </div>
     </div>
 </section>
 
@@ -262,6 +227,21 @@
 <footer>
     © 2025 Riji V J · Full Stack Developer
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-btn" onclick="openWhatsApp()">
+    💬
+</div>
+
+<script>
+    function openWhatsApp() {
+        const phone = "919995782784"; // change if needed
+        const message = encodeURIComponent(
+            "Hi Riji, I came across your portfolio and would like to connect with you."
+        );
+        window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    }
+</script>
 
 </body>
 </html>
